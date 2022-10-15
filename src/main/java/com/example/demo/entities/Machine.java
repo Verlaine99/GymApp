@@ -1,6 +1,7 @@
 package com.example.demo.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -27,7 +28,8 @@ public class Machine {
     private Integer id;
     private String name;
     private String brand;
-    private Integer year;
+    @JsonProperty("year")
+    private Integer year1;
     private String description;
     
     @ManyToOne
