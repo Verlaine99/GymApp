@@ -1,8 +1,10 @@
 package com.example.demo.controller;
 
+import com.example.demo.entities.ClientReport;
 import com.example.demo.service.ReservationService;
 import java.util.List;
 import com.example.demo.entities.Reservation;
+import com.example.demo.entities.ReservationReport;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -49,5 +51,18 @@ public class ReservationController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public boolean delete(@PathVariable("id") Integer id) {
         return reservationService.delete(id);
+    }
+    
+    @GetMapping("/Report-status")
+    public ReservationReport getReservationStatusReport(){
+        return reservationService.getReservationReport();
+    }
+    @GetMapping("/report-dates/{dateOne}/{dateTwo}")
+    public List<Reservation> getReservationReportDates(@PathVariable("dateOne")String dateOne, @PathVariable("dateTwo")String dateTwo){
+        return reservationService.getReservationPeriod(dateOne,dateTwo);       
+    }
+    @GetMapping("/report-clients")
+    public List<ClientReport> getReportClients(){
+        return reservationService.getTopClients();
     }
 }
