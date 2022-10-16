@@ -44,8 +44,8 @@ public class MachineService {
                 if (machine.getBrand() != null) {
                     optional.get().setBrand(machine.getBrand());
                 }
-                if (machine.getYear1() != null) {
-                    optional.get().setYear1(machine.getYear1());
+                if (machine.getYear() != null) {
+                    optional.get().setYear(machine.getYear());
                 }
                 if (machine.getDescription() != null) {
                     optional.get().setDescription(machine.getDescription());

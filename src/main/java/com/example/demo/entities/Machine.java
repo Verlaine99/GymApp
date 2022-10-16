@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -28,8 +29,8 @@ public class Machine {
     private Integer id;
     private String name;
     private String brand;
-    @JsonProperty("year")
-    private Integer year1;
+    @Column(name = "years")
+    private Integer year;
     private String description;
     
     @ManyToOne
