@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class ClientRepository {
+    
     @Autowired
     private ClientCrudRepository clientCrudRepository;
     
