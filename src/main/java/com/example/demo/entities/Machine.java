@@ -33,16 +33,16 @@ public class Machine {
     private String description;
     
     @ManyToOne
-    @JoinColumn(name = "idCategory")
+    @JoinColumn(name = "categoryId")
     @JsonIgnoreProperties("machines")
     private Category category;
     
     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "machine")
     @JsonIgnoreProperties({"machine","client"})
-    private List<Message>messages;
+    private List<Message> messages;
     
     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "machine")
-    @JsonIgnoreProperties({"machine","client"})
+    @JsonIgnoreProperties({"machine","messages"})
     private List<Reservation> reservations;
     
 }

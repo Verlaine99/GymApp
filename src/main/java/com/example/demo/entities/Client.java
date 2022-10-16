@@ -1,4 +1,3 @@
-
 package com.example.demo.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -25,9 +24,9 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idClient;
     private String name;
-    private String email;
     private String Password;
-    private String age;
+    private String email;
+    private Integer age;
     
     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "client")
     @JsonIgnoreProperties("client")
