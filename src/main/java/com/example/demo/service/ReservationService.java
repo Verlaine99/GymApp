@@ -79,9 +79,9 @@ public class ReservationService {
     }
     
     public List<Reservation> getReservationPeriod(String dateA, String dateB){
-        SimpleDateFormat parser=new SimpleDateFormat("yyyy-MM-dd");
-        Date aDate= new Date();
-        Date bDate= new Date();
+        SimpleDateFormat parser = new SimpleDateFormat("yyyy-MM-dd");
+        Date aDate = new Date();
+        Date bDate = new Date();
 
         try {
             aDate = parser.parse(dateA);
