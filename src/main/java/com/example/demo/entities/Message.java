@@ -26,11 +26,11 @@ public class Message {
     
     @ManyToOne
     @JoinColumn(name = "idMachine")
-    @JsonIgnoreProperties({"messages","client","reservations"})
+    @JsonIgnoreProperties({"messages","reservations"})
     private Machine machine;
     
     @ManyToOne
     @JoinColumn(name = "idClient")
-    @JsonIgnoreProperties({"messages","client","reservations"})
+    @JsonIgnoreProperties({"messages","reservations"})
     private Client client;
 }
