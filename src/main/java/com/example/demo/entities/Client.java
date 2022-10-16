@@ -23,10 +23,11 @@ public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idClient;
-    private String name;
-    private String Password;
     private String email;
+    private String Password;
+    private String name;
     private Integer age;
+    
     
     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "client")
     @JsonIgnoreProperties("client")

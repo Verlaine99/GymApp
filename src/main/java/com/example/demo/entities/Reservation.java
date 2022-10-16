@@ -28,12 +28,12 @@ public class Reservation {
     private String status = "created";
     
     @ManyToOne
-    @JoinColumn(name = "machineId")
+    @JoinColumn(name = "idMachine")
     @JsonIgnoreProperties("reservations")
     private Machine machine;
     
     @ManyToOne
-    @JoinColumn(name = "clientId")
+    @JoinColumn(name = "IdClient")
     @JsonIgnoreProperties({"reservations","messages"})
     private Client client;
     private String score;
