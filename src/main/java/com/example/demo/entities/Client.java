@@ -24,7 +24,7 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idClient;
     private String email;
-    private String Password;
+    private String password;
     private String name;
     private Integer age;
     
